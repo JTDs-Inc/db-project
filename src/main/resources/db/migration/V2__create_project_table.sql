@@ -6,7 +6,7 @@ CREATE TABLE project (
     techLeadId int NOT NULL,
     clientId int NOT NULL,
     salesEmployeeId int NOT NULL,
-    startDate DateTime NOT NULL,
+    startDate DateTime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     finishDate DateTime,
     commissionRate decimal(3,2) NOT NULL,
     CHECK (commissionRate<=1),
