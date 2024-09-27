@@ -2,11 +2,9 @@ SELECT CONCAT(`salesEmployees`.`firstName`, ' ', `salesEmployees`.`lastName`) AS
 FROM `salesEmployees`
 INNER JOIN `project`
     ON `project`.`salesEmployeeId` = `salesEmployees`.`salesEmployeeId`
-WHERE NOT (
-    (YEAR(`project`.`startDate`) = YEAR(CURRENT_DATE())) OR
-    (`project`.`startDate` < CURRENT_DATE() AND (
-        `project`.`finishDate` IS NULL OR
-            YEAR(`project`.`finishDate`) >= YEAR(CURRENT_DATE())
-    ))
+WHERE (
+    `project`.`finishDate` IS NULL AND
+    `project`.`finishDate` >= CURDATE() AND
+    `project`.`startDate` <= CURDATE()
 )
 GROUP BY `salesEmployees`.`salesEmployeeId`;
