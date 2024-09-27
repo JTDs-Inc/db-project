@@ -5,5 +5,5 @@ CREATE TABLE deliveryEmployee (
 	currency char(3),
 	bankAccountNumber varchar(34),
 	nationalInsurance varchar(9),
-	PRIMARY KEY(delEmpId)
+	PRIMARY KEY(deliveryEmployeeId)
 );
