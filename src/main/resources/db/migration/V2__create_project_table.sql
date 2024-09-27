@@ -8,6 +8,7 @@ CREATE TABLE project (
     salesEmployeeId int,
     startDate DateTime,
     finishDate DateTime,
-    commissionRate decimal(3, 2),
+    commissionRate decimal(3,2) NOT NULL,
+    CHECK (commissionRate<=1),
     PRIMARY KEY(projectId)
 );
