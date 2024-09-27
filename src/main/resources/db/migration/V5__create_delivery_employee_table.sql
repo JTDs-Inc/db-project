@@ -4,6 +4,6 @@ CREATE TABLE deliveryEmployee (
 	salary decimal(7, 2),
 	currency char(3),
 	bankAccountNumber varchar(34),
-	nationalInsurance varchar(9),
+	nationalInsuranceNumber varchar(9),
 	PRIMARY KEY(deliveryEmployeeId)
 );
