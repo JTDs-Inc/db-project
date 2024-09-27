@@ -1,6 +1,6 @@
 CREATE TABLE projectTech (
-    techId int,
+    technologyId int,
     projectId int,
-    FOREIGN KEY (techId) REFERENCES technology(techId),
+    FOREIGN KEY (techId) REFERENCES technology(technologyId),
     FOREIGN KEY (projectId) REFERENCES project(projectId)
 );
