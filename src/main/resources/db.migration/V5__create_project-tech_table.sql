@@ -4,3 +4,4 @@ CREATE TABLE projectTech (
     FOREIGN KEY (techId) REFERENCES technology(technologyId),
     FOREIGN KEY (projectId) REFERENCES project(projectId)
 );
+
