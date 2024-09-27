@@ -1,1 +1,0 @@
-ALTER TABLE `project` ADD FOREIGN KEY (salesEmployeeID) REFERENCES salesEmployees(salesEmployeeId);
