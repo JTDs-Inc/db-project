@@ -4,7 +4,7 @@ INNER JOIN `project`
     ON `project`.`salesEmployeeId` = `salesEmployees`.`salesEmployeeId`
 WHERE (
     (`project`.`finishDate` IS NULL OR
-    `project`.`finishDate` >= CURDATE()) AND
-    `project`.`startDate` <= CURDATE()
+    YEAR(`project`.`finishDate`) >= YEAR(CURDATE())) AND
+    YEAR(`project`.`startDate`) <= YEAR(CURDATE())
 )
 GROUP BY `salesEmployees`.`salesEmployeeId`;
